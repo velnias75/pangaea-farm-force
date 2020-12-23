@@ -1,1 +1,0 @@
-function vb-bambule:start
