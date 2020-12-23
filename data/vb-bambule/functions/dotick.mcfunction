@@ -1,17 +1,17 @@
 scoreboard players add @a Bambule_Start 0
-scoreboard players enable @a Bambule_Start
+scoreboard players enable @a[nbt={"UUID":[I; 1360762511, 2041204549, -1317449488, 998953587]}] Bambule_Start
 
 execute as @a[scores={Bambule_Start=1..}] run scoreboard players set @s Bambule_func 1
 scoreboard players set @a Bambule_Start 0
 
 scoreboard players add @a Bambule_Stop 0
-scoreboard players enable @a Bambule_Stop
+scoreboard players enable @a[nbt={"UUID":[I; 1360762511, 2041204549, -1317449488, 998953587]}] Bambule_Stop
 
 execute as @a[scores={Bambule_Stop=1..}] run scoreboard players set @s Bambule_func 2
 scoreboard players set @a Bambule_Stop 0
 
 scoreboard players add @a Bambule_Status 0
-scoreboard players enable @a Bambule_Status
+scoreboard players enable @a[nbt={"UUID":[I; 1360762511, 2041204549, -1317449488, 998953587]}] Bambule_Status
 
 execute as @a[scores={Bambule_Status=1..}] run scoreboard players set @s Bambule_func 3
 scoreboard players set @a Bambule_Status 0
