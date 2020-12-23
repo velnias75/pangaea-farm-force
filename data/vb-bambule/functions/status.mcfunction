@@ -1,1 +1,1 @@
-execute unless score #bambule bambuleaktiv matches 0 run tellraw @a ["",{"text":"Status des Bambule Autoofens (Vogelsberg): "},{"score":{"name":"#bambule","objective":"bambulezeit"}},{"text":" von 72000"}]
+execute unless score #bambule bambuleaktiv matches 0 run tellraw @p[nbt={"UUID":[I; 1360762511, 2041204549, -1317449488, 998953587]}] ["",{"text":"Status des Bambule Autoofens (Vogelsberg): "},{"score":{"name":"#bambule","objective":"bambulezeit"}},{"text":" von 72000"}]

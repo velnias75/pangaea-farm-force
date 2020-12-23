@@ -1,4 +1,3 @@
-execute unless score #bambule bambuleaktiv matches 0 run tellraw @a "Der Bambule Autoofen (Vogelsberg) ist nun nur noch aktiv, wenn ein Spieler in der Nähe ist"
 execute unless score #bambule bambuleaktiv matches 0 run bossbar set vb-bambule:bossbar visible false
 execute unless score #bambule bambuleaktiv matches 0 run bossbar set vb-bambule:bossbar value 0
 execute unless score #bambule bambuleaktiv matches 0 run scoreboard players set #bambule bambulezeit 72001
