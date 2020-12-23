@@ -7,10 +7,13 @@ execute as @a[scores={quits=1..}] at @s run title @p title {"text":"Willkommen",
 scoreboard players set @a[scores={quits=1..}] quits 0
 
 scoreboard players add @a Goldbuch 0
-scoreboard players enable @a Goldbuch
+scoreboard players add @a Goldbuch_go 0
 
-scoreboard players add @a do_Goldbuch_go 0
-scoreboard players enable @a Goldbuch_go
+scoreboard players enable @a[nbt={"UUID":[I; 1360762511, 2041204549, -1317449488, 998953587]}] Goldbuch
+scoreboard players enable @a[nbt={"UUID":[I; 1749174933, 1963803381, -1740955934, 1690785772]}] Goldbuch
+
+execute as @a run execute if entity @s[nbt={SelectedItem:{tag:{title:"Goldenes Buch von Forks"}}},nbt={SelectedItem:{tag:{author:"Pepe VanDeBear"}}}] run scoreboard players enable @s Goldbuch_go
+execute as @a run execute unless entity @s[nbt={SelectedItem:{tag:{title:"Goldenes Buch von Forks"}}}] run scoreboard players reset @s Goldbuch_go
 
 execute as @a[scores={Goldbuch=1..}] run scoreboard players set @s create_Goldbuch 1
 execute as @a[scores={Goldbuch_go=1..}] run scoreboard players set @s create_Goldbuch 2
