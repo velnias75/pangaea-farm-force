@@ -1,6 +1,7 @@
 {
 	"values": [
 		"vb-bambule:load",
+		"etf-restorer:load",
 		"pangaea-farm-force:load"
 	]
 }
