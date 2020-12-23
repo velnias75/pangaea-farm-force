@@ -1,0 +1,1 @@
+function vb-bambule:status
