@@ -1,0 +1,3 @@
+execute if score #hit pangaea_raycast_ matches 0 positioned ~-0.05 ~-0.05 ~-0.05 as @e[type=#pangaea_raycast:entities,tag=!pangaea_ray,dx=0,sort=nearest] if score #hit pangaea_raycast_ matches 0 positioned ~-0.85 ~-0.85 ~-0.85 if entity @s[dx=0] run function pangaea_raycast:hit_entity
+scoreboard players add #distance pangaea_raycast_ 1
+execute if score #hit pangaea_raycast_ matches 0 if score #distance pangaea_raycast_ matches ..100 positioned ^ ^ ^0.1 run function pangaea_raycast:ray

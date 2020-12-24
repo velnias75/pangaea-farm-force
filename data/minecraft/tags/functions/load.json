@@ -2,6 +2,7 @@
 	"values": [
 		"vb-bambule:load",
 		"etf-restorer:load",
+		"pangaea_raycast:load",
 		"pangaea-farm-force:load"
 	]
 }

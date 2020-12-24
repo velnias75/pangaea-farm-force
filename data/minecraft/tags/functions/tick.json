@@ -2,6 +2,7 @@
 	"values": [
 		"vb-bambule:tick",
 		"etf-restorer:tick",
+		"pangaea_raycast:tick",
 		"pangaea-farm-force:tick"
 	]
 }
