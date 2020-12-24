@@ -25,12 +25,10 @@ execute as @a[scores={create_Goldbuch=1}] run give @s written_book{pages:['["",{
 execute as @a[scores={create_Goldbuch=2}] run execute unless entity @s[nbt={Dimension:"minecraft:the_nether"}] run function pangaea-farm-force:gold_spawn
 execute as @a[scores={create_Goldbuch=2}] run scoreboard players set @s playerInGoldfarm 1
 
-#execute as @a[scores={create_Goldbuch=2}] run execute if entity @s[nbt={Dimension:"minecraft:the_nether"}] run tellraw @s "Gehe in die Oberwelt. Begib Dich direkt dorthin. Gehe nicht über Los. Ziehe nicht € 2000 ein. — Alternativ /home"
-execute as @a store result score @s GoldFarmLvlNew run xp query @s levels
-execute as @a run scoreboard players operation @s GoldFarmLvlNew -= @s GoldFarmLevel
+execute as @a[scores={playerInGoldfarm=1}] store result score @s GoldFarmLvlNew run xp query @s levels
+execute as @a[scores={playerInGoldfarm=1}] run scoreboard players operation @s GoldFarmLvlNew -= @s GoldFarmLevel
 
 execute if entity @a[scores={playerInGoldfarm=1}] run scoreboard objectives setdisplay sidebar GoldFarmLvlNew
-execute as @a[scores={playerInGoldfarm=1}] run execute unless entity @s[nbt={Dimension:"minecraft:the_nether"}] run scoreboard objectives setdisplay sidebar
-execute as @a[scores={playerInGoldfarm=1}] run execute unless entity @s[nbt={Dimension:"minecraft:the_nether"}] run scoreboard players set @s playerInGoldfarm 0
+execute as @a[scores={playerInGoldfarm=1}] run execute unless entity @s[nbt={Dimension:"minecraft:the_nether"}] run function pangaea-farm-force:reset_goldfarm
 
 scoreboard players set @a create_Goldbuch 0
