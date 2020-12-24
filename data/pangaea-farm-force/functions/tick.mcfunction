@@ -22,6 +22,15 @@ scoreboard players set @a Goldbuch 0
 scoreboard players set @a Goldbuch_go 0
 
 execute as @a[scores={create_Goldbuch=1}] run give @s written_book{pages:['["",{"text":"Das "},{"text":"Goldene Buch von Forks","color":"gold"},{"text":" führt dich auf hirnlosen Wegen zum Portal der ","color":"reset"},{"text":"Goldfarm","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger Goldbuch_go"}},{"text":".","color":"reset"}]'],title:"Goldenes Buch von Forks",author:"Pepe VanDeBear",generation:3}
-execute as @a[scores={create_Goldbuch=2}] run tp @s 2352 73 2808 63.3 18.7
+execute as @a[scores={create_Goldbuch=2}] run execute unless entity @s[nbt={Dimension:"minecraft:the_nether"}] run function pangaea-farm-force:gold_spawn
+execute as @a[scores={create_Goldbuch=2}] run scoreboard players set @s playerInGoldfarm 1
+
+#execute as @a[scores={create_Goldbuch=2}] run execute if entity @s[nbt={Dimension:"minecraft:the_nether"}] run tellraw @s "Gehe in die Oberwelt. Begib Dich direkt dorthin. Gehe nicht über Los. Ziehe nicht € 2000 ein. — Alternativ /home"
+execute as @a store result score @s GoldFarmLvlNew run xp query @s levels
+execute as @a run scoreboard players operation @s GoldFarmLvlNew -= @s GoldFarmLevel
+
+execute if entity @a[scores={playerInGoldfarm=1}] run scoreboard objectives setdisplay sidebar GoldFarmLvlNew
+execute as @a[scores={playerInGoldfarm=1}] run execute unless entity @s[nbt={Dimension:"minecraft:the_nether"}] run scoreboard objectives setdisplay sidebar
+execute as @a[scores={playerInGoldfarm=1}] run execute unless entity @s[nbt={Dimension:"minecraft:the_nether"}] run scoreboard players set @s playerInGoldfarm 0
 
 scoreboard players set @a create_Goldbuch 0
