@@ -2,9 +2,9 @@ replaceitem block -868 82 6324 container.0 minecraft:redstone 64
 replaceitem block -868 82 6324 container.1 minecraft:redstone 64
 replaceitem block -868 82 6324 container.2 minecraft:redstone 64
 replaceitem block -868 82 6324 container.3 minecraft:diamond 64
-replaceitem block -868 82 6324 container.4 minecraft:diamond 64
+replaceitem block -868 82 6324 container.4 minecraft:air
 replaceitem block -868 82 6324 container.5 minecraft:iron_nugget 64
-replaceitem block -868 82 6324 container.6 minecraft:iron_nugget 64
+replaceitem block -868 82 6324 container.6 minecraft:air
 replaceitem block -868 82 6324 container.7 minecraft:gold_nugget 64
 replaceitem block -868 82 6324 container.8 minecraft:gold_nugget 64
 
@@ -12,9 +12,9 @@ replaceitem block -866 82 6324 container.0 minecraft:redstone 64
 replaceitem block -866 82 6324 container.1 minecraft:redstone 64
 replaceitem block -866 82 6324 container.2 minecraft:redstone 64
 replaceitem block -866 82 6324 container.3 minecraft:diamond 64
-replaceitem block -866 82 6324 container.4 minecraft:diamond 64
+replaceitem block -866 82 6324 container.4 minecraft:air
 replaceitem block -866 82 6324 container.5 minecraft:iron_nugget 64
-replaceitem block -866 82 6324 container.6 minecraft:iron_nugget 64
+replaceitem block -866 82 6324 container.6 minecraft:air
 replaceitem block -866 82 6324 container.7 minecraft:gold_nugget 64
 replaceitem block -866 82 6324 container.8 minecraft:gold_nugget 64
 
@@ -22,9 +22,9 @@ replaceitem block -864 82 6324 container.0 minecraft:redstone 64
 replaceitem block -864 82 6324 container.1 minecraft:redstone 64
 replaceitem block -864 82 6324 container.2 minecraft:redstone 64
 replaceitem block -864 82 6324 container.3 minecraft:diamond 64
-replaceitem block -864 82 6324 container.4 minecraft:diamond 64    
+replaceitem block -864 82 6324 container.4 minecraft:air
 replaceitem block -864 82 6324 container.5 minecraft:iron_nugget 64
-replaceitem block -864 82 6324 container.6 minecraft:iron_nugget 64
+replaceitem block -864 82 6324 container.6 minecraft:air
 replaceitem block -864 82 6324 container.7 minecraft:gold_nugget 64
 replaceitem block -864 82 6324 container.8 minecraft:gold_nugget 64
 
