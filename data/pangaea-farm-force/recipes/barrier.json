@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#C#",
+        "   "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:poisonous_potato"
+        },
+        "C": {
+            "item": "minecraft:charcoal"
+        }
+    },
+    "result": {
+        "item": "minecraft:barrier",
+        "count": 6
+    }
+}
