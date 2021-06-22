@@ -50,6 +50,6 @@ scoreboard players set @a birthday_book_do 0
 
 execute as @a[scores={create_bd_book=1}] run give @s written_book{pages:['["",{"text":"Alles Gute zu Deinem Geburtstag!\\n\\n\\n","bold":true},{"text":"Klicke hier für Dein Geburtstagsgeschenk!","bold":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger birthday_book_do"}},{"text":"\\n\\n\\n\\n","color":"reset"},{"text":"Bitte beachte, dass Du Dieses Buch nur einmal nutzen kannst.","italic":true}]'],title:"Alles Gute zum Geburtstag",author:"Die Vogelsberger Lohen",generation:3,display:{Lore:["Dein Geburtstagsgeschenk von den Vogelsbergern Pyromaniac-Lohen."]}}
 execute as @a[scores={create_bd_book=2}] run xp add @s 300 levels
-execute as @a[scores={create_bd_book=2}] run replaceitem entity @s weapon minecraft:air
+execute as @a[scores={create_bd_book=2}] run item replace entity @s weapon with minecraft:air
 
 scoreboard players set @a create_bd_book 0
