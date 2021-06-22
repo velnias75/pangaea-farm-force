@@ -12,3 +12,7 @@ scoreboard objectives add playerInGoldfarm dummy
 scoreboard objectives add GoldFarmLevel dummy
 scoreboard objectives add GoldFarmLvlNew dummy
 scoreboard objectives modify GoldFarmLvlNew displayname [{"text":"Pepes ", "color":"dark_green"}, {"text":"Goldfarm", "color":"gold"}, {"text":": erfarmte Level", "color":"gray"}]
+
+scoreboard objectives add birthday_book trigger
+scoreboard objectives add birthday_book_do trigger
+scoreboard objectives add create_bd_book dummy

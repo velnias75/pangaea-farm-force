@@ -32,3 +32,24 @@ execute if entity @a[scores={playerInGoldfarm=1}] run scoreboard objectives setd
 execute as @a[scores={playerInGoldfarm=1}] run execute unless entity @s[nbt={Dimension:"minecraft:the_nether"}] run function pangaea-farm-force:reset_goldfarm
 
 scoreboard players set @a create_Goldbuch 0
+
+
+scoreboard players add @a birthday_book 0
+scoreboard players add @a birthday_book_do 0
+
+scoreboard players enable @a[nbt={"UUID":[I; 1360762511, 2041204549, -1317449488, 998953587]}] birthday_book
+
+execute as @a run execute if entity @s[nbt={SelectedItem:{tag:{title:"Alles Gute zum Geburtstag"}}},nbt={SelectedItem:{tag:{author:"Die Vogelsberger Lohen"}}}] run scoreboard players enable @s birthday_book_do
+execute as @a run execute unless entity @s[nbt={SelectedItem:{tag:{title:"Alles Gute zum Geburtstag"}}}] run scoreboard players reset @s birthday_book_do
+
+execute as @a[scores={birthday_book=1..}] run scoreboard players set @s create_bd_book 1
+execute as @a[scores={birthday_book_do=1..}] run scoreboard players set @s create_bd_book 2
+
+scoreboard players set @a birthday_book 0
+scoreboard players set @a birthday_book_do 0
+
+execute as @a[scores={create_bd_book=1}] run give @s written_book{pages:['["",{"text":"Alles Gute zu Deinem Geburtstag!\\n\\n\\n","bold":true},{"text":"Klicke hier für Dein Geburtstagsgeschenk!","bold":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger birthday_book_do"}},{"text":"\\n\\n\\n\\n","color":"reset"},{"text":"Bitte beachte, dass Du Dieses Buch nur einmal nutzen kannst.","italic":true}]'],title:"Alles Gute zum Geburtstag",author:"Die Vogelsberger Lohen",generation:3,display:{Lore:["Dein Geburtstagsgeschenk von den Vogelsbergern Pyromaniac-Lohen."]}}
+execute as @a[scores={create_bd_book=2}] run xp add @s 300 levels
+execute as @a[scores={create_bd_book=2}] run replaceitem entity @s weapon minecraft:air
+
+scoreboard players set @a create_bd_book 0
