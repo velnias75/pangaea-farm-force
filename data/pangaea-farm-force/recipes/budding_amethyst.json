@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#A#",
+        "AUA",
+        "#A#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:amethyst_shard"
+        },
+        "A": {
+            "item": "minecraft:amethyst_block"
+        },
+        "U": {
+            "item": "minecraft:amethyst_cluster"
+        }
+    },
+    "result": {
+        "item": "minecraft:budding_amethyst",
+        "count": 1
+    }
+}
