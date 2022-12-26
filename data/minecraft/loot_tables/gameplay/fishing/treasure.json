@@ -57,7 +57,8 @@
               ]
             }
           ],
-          "name": "minecraft:wet_sponge"
+          "name": "minecraft:wet_sponge",
+          "weight": 4
         },
         {
           "type": "minecraft:item",
